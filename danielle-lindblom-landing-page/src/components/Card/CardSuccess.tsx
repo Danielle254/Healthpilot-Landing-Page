@@ -1,3 +1,29 @@
-export default function CardSuccess() {
-  return <div></div>;
+import successCheckmark from "../../assets/success-checkmark.png";
+
+export default function CardSuccess({ userName }: { userName: string }) {
+  return (
+    <div className="pt-[17px] pb-[10px] md:pb-[17px] px-[15px] max-w-[672px] z-10 text-center mx-auto">
+      <img
+        src={successCheckmark}
+        className="h-[48px] w-[48px] rounded-full mb-[10px] mx-auto"
+        alt=""
+      />
+      <p className="font-bold text-[30px]/[1.3] tracking-[-0.3px] text-primary-text text-balance mb-[14px]">
+        Thanks, {userName}! We'll be in touch soon.
+      </p>
+      <div className="py-[13px]">
+        <p className="text-[18px]/[1.43] text-primary-text mb-[8px]">
+          Don't want to wait for us to call?
+          <br />
+          Call us now to speak to a licensed agent.
+        </p>
+        <a
+          href="tel:+15558675309"
+          className="text-[30px]/[1.25] tracking-[-0.3px] font-bold underline text-phone-blue"
+        >
+          555-867-5309
+        </a>
+      </div>
+    </div>
+  );
 }
