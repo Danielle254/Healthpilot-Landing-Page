@@ -5,11 +5,11 @@ import Card from "./components/Card/Card";
 
 function App() {
   return (
-    <>
+    <div className="bg-white font-source">
       <Header />
       <Hero />
       <Card />
-    </>
+    </div>
   );
 }
 
