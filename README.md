@@ -4,6 +4,9 @@ Simple responsive landing page built with React, TypeScript, and Tailwind CSS. O
 
 (Live Site)[https://healthpilot-landing-page-danielle-lindblom.vercel.app/] deployed with Vercel. 
 
+<img width="1066" height="812" alt="everwell screen" src="https://github.com/user-attachments/assets/1bd7d796-e2e0-42ff-ad97-fd61677e9196" />
+
+
 ## Instructions
 
 To run locally:
