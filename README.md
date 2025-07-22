@@ -13,7 +13,7 @@ To run locally:
 
 1. Clone the repo
 
-From your local terminal, run the command `git clone https://github.com/Danielle254/Healthpilot-Landing-Page.git`
+`git clone https://github.com/Danielle254/Healthpilot-Landing-Page.git`
 
 2. Install dependencies
 
