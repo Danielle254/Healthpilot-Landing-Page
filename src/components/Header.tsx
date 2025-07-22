@@ -10,7 +10,7 @@ export default function Header() {
         </p>
         <a
           href="https://www.healthpilot.com"
-          className="bg-button hover:bg-button-hover py-[12px] px-[14px] rounded-[10px] font-bold text-[18px]/[1.14] text-center sm:px-[24px] sm:w-[176px] text-white"
+          className="bg-button hover:bg-button-hover py-[12px] px-[14px] rounded-[10px] font-bold text-[18px]/[1.14] text-center sm:px-[24px] sm:w-[176px] text-white focus:outline-focus-blue focus:outline-[3px]"
         >
           Get Started
         </a>
