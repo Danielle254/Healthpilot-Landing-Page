@@ -10,11 +10,11 @@ export default function CardSuccess({ userName }: CardSuccessPropsType) {
           alt=""
         />
       </div>
-      <p className="font-bold text-[30px]/[1.3] tracking-[-0.3px] text-primary-text text-balance mb-[14px]">
+      <p className="font-bold text-[30px]/[1.3] tracking-[-0.3px] text-primary text-balance mb-[14px]">
         Thanks, {userName}! We'll be in touch soon.
       </p>
       <div className="py-[13px]">
-        <p className="text-[18px]/[1.43] text-primary-text mb-[8px]">
+        <p className="text-[18px]/[1.43] text-primary mb-[8px]">
           Don't want to wait for us to call?
           <br />
           Call us now to speak to a licensed agent.
