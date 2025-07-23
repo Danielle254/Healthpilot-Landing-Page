@@ -67,6 +67,7 @@ export default function CardForm({
             placeholder="Phone Number"
             className={inputStyling}
             onChange={handleFormChange}
+            required
           />
         </div>
         <div className="flex flex-col gap-[5px]">
@@ -81,6 +82,7 @@ export default function CardForm({
             placeholder="Email Address"
             className={inputStyling}
             onChange={handleFormChange}
+            required
           />
         </div>
         <input
