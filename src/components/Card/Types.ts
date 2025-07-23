@@ -14,3 +14,7 @@ export type CardFormPropsType = {
 export type CardSuccessPropsType = {
   userName: string;
 };
+
+export type CardHeaderItemPropsType = {
+  itemText: string;
+};
