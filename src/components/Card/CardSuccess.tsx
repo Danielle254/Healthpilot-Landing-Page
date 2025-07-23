@@ -3,10 +3,10 @@ import type { CardSuccessPropsType } from "./Types";
 export default function CardSuccess({ userName }: CardSuccessPropsType) {
   return (
     <div className="pt-[17px] pb-[10px] md:pb-[17px] px-[15px] max-w-[672px] z-10 text-center mx-auto">
-      <div className="h-[48px] w-[48px] bg-button rounded-full mb-[10px] mx-auto flex items-center justify-center">
+      <div className="h-12 w-12 bg-button rounded-full mb-[10px] mx-auto flex items-center justify-center">
         <img
           src="/checkmark.svg"
-          className="h-[20.2px] w-[27.9px] pt-[1px] pl-[2px]"
+          className="h-[20.2px] w-[27.9px] pt-px pl-[2px]"
           alt=""
         />
       </div>
@@ -15,7 +15,7 @@ export default function CardSuccess({ userName }: CardSuccessPropsType) {
         soon.
       </p>
       <div className="py-[13px]">
-        <p className="text-lg/[1.43] text-primary mb-[8px]">
+        <p className="text-lg/[1.43] text-primary mb-2">
           Don't want to wait for us to call?
           <br />
           Call us now to speak to a licensed agent.

@@ -99,7 +99,7 @@ export default function CardForm({
           name={name}
           value={formData[value]}
           placeholder={placeholder}
-          className="border-[1px] border-placeholder-gray rounded-[15px] py-[10px] px-[20px] min-h-[60px] placeholder:placeholder-gray placeholder:text-lg focus:outline-focus-blue focus:outline-[3px]"
+          className="border-1 border-placeholder-gray rounded-[15px] py-[10px] px-5 min-h-[60px] placeholder:placeholder-gray placeholder:text-lg focus:outline-focus-blue focus:outline-[3px]"
           onChange={handleFormChange}
           required={required ? required : undefined}
           pattern={validation[0] ? validation[1] : undefined}
@@ -132,7 +132,7 @@ export default function CardForm({
         ))}
         <input
           type="submit"
-          className="bg-button text-white hover:bg-button-hover rounded-full w-full py-[12px] px-[24px] font-bold text-lg/[1.14] h-[50px] mt-[36px] mb-[18px] md:w-[288px] md:mx-auto md:col-span-2 md:mt-[32px] md:mb-[16px] focus:outline-focus-blue focus:outline-[3px] cursor-pointer"
+          className="bg-button text-white hover:bg-button-hover rounded-full w-full py-[3px] px-6 font-bold text-lg/[1.14] h-[50px] mt-9 mb-[18px] md:w-[288px] md:mx-auto md:col-span-2 md:mt-8 md:mb-4 focus:outline-focus-blue focus:outline-[3px] cursor-pointer"
         />
       </form>
     </div>
