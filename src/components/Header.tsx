@@ -1,10 +1,8 @@
-import logo from "../assets/logo.png";
-
 export default function Header() {
   return (
     <header className="py-[16px] px-[15px] border-b-[1px] border-placeholder-gray h-[80px] md:h-[86px]">
       <div className="max-w-[1024px] flex items-center justify-between mx-auto">
-        <img src={logo} alt="EverWell logo" className="w-[175px]" />
+        <img src="/logo.png" alt="EverWell logo" className="w-[175px]" />
         <p className="italic text-header-gray text-[18px] hidden md:block">
           Your Medicare Personal Shopper
         </p>
