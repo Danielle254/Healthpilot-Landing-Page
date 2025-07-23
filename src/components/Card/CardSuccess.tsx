@@ -11,7 +11,8 @@ export default function CardSuccess({ userName }: CardSuccessPropsType) {
         />
       </div>
       <p className="font-bold text-[30px]/[1.3] tracking-[-0.3px] text-primary text-balance mb-[14px]">
-        Thanks, {userName}! We'll be in touch soon.
+        Thanks{userName.length > 0 && ", " + { userName }}! We'll be in touch
+        soon.
       </p>
       <div className="py-[13px]">
         <p className="text-[18px]/[1.43] text-primary mb-[8px]">
