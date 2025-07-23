@@ -88,7 +88,7 @@ export default function CardForm({
       <div className="flex flex-col gap-[5px]">
         <label
           htmlFor="phone"
-          className="text-primary font-semibold text-[18px]/[1.3]"
+          className="text-primary font-semibold text-lg/[1.3]"
         >
           {text}
           {required && <span className="text-warning-red pl-[3px]">*</span>}
@@ -99,7 +99,7 @@ export default function CardForm({
           name={name}
           value={formData[value]}
           placeholder={placeholder}
-          className="border-[1px] border-placeholder-gray rounded-[15px] py-[10px] px-[20px] min-h-[60px] placeholder:placeholder-gray placeholder:text-[18px] focus:outline-focus-blue focus:outline-[3px]"
+          className="border-[1px] border-placeholder-gray rounded-[15px] py-[10px] px-[20px] min-h-[60px] placeholder:placeholder-gray placeholder:text-lg focus:outline-focus-blue focus:outline-[3px]"
           onChange={handleFormChange}
           required={required ? required : undefined}
           pattern={validation[0] ? validation[1] : undefined}
@@ -132,7 +132,7 @@ export default function CardForm({
         ))}
         <input
           type="submit"
-          className="bg-button text-white hover:bg-button-hover rounded-full w-full py-[12px] px-[24px] font-bold text-[18px]/[1.14] h-[50px] mt-[36px] mb-[18px] md:w-[288px] md:mx-auto md:col-span-2 md:mt-[32px] md:mb-[16px] focus:outline-focus-blue focus:outline-[3px] cursor-pointer"
+          className="bg-button text-white hover:bg-button-hover rounded-full w-full py-[12px] px-[24px] font-bold text-lg/[1.14] h-[50px] mt-[36px] mb-[18px] md:w-[288px] md:mx-auto md:col-span-2 md:mt-[32px] md:mb-[16px] focus:outline-focus-blue focus:outline-[3px] cursor-pointer"
         />
       </form>
     </div>

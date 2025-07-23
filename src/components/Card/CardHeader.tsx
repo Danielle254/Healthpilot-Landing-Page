@@ -21,7 +21,7 @@ export default function CardHeader() {
 function CardHeaderItem({ itemText }: CardHeaderItemPropsType) {
   return (
     <li className="py-[8px] px-[4px] list-image-[url(/checkmark.svg)]">
-      <p className="text-[18px]/[1.4] pl-[6px] font-bold">{itemText}</p>
+      <p className="text-lg/[1.4] pl-[6px] font-bold">{itemText}</p>
     </li>
   );
 }
