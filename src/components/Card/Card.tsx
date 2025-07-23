@@ -3,7 +3,7 @@ import CardForm from "./CardForm";
 import CardHeader from "./CardHeader";
 import CardSuccess from "./CardSuccess";
 import CardFooter from "./CardFooter";
-import type { FormDataType } from "./FormDataType";
+import type { FormDataType } from "./Types";
 
 const blankForm: FormDataType = {
   firstName: "",

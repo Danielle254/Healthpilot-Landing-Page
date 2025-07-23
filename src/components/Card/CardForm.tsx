@@ -1,14 +1,10 @@
-import type { FormDataType } from "./FormDataType";
+import type { CardFormPropsType } from "./Types";
 
 export default function CardForm({
   showSuccess,
   formData,
   setFormData,
-}: {
-  showSuccess: React.Dispatch<React.SetStateAction<boolean>>;
-  formData: FormDataType;
-  setFormData: React.Dispatch<React.SetStateAction<FormDataType>>;
-}) {
+}: CardFormPropsType) {
   const labelStyling = "text-primary-text font-semibold text-[18px]/[1.3]";
   const inputStyling =
     "border-[1px] border-placeholder-gray rounded-[15px] py-[10px] px-[20px] min-h-[60px] placeholder-placeholder-gray placeholder-[18px] focus:outline-focus-blue focus:outline-[3px]";
