@@ -68,6 +68,8 @@ export default function CardForm({
             className={inputStyling}
             onChange={handleFormChange}
             required
+            pattern="[0-9]{10}"
+            title="Please enter a 10 digit phone number with no dashes"
           />
         </div>
         <div className="flex flex-col gap-[5px]">
