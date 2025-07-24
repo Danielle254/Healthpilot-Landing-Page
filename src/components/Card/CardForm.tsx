@@ -10,17 +10,6 @@ export default function CardForm({
     setFormData({ ...formData, [name]: value });
   }
 
-  type CardFormInputPropsType = {
-    name: string;
-    value: keyof typeof formData;
-    text: string;
-    type: string;
-    placeholder: string;
-    required: boolean;
-    validation: [boolean, string?, string?];
-    handleFormChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
-  };
-
   type InputDataType = {
     name: string;
     value: keyof typeof formData;
@@ -74,6 +63,17 @@ export default function CardForm({
     },
   ];
 
+  type CardFormInputPropsType = {
+    name: string;
+    value: keyof typeof formData;
+    text: string;
+    type: string;
+    placeholder: string;
+    required: boolean;
+    validation: [boolean, string?, string?];
+    handleFormChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  };
+
   function CardFormInput({
     name,
     value,
@@ -99,7 +99,7 @@ export default function CardForm({
           name={name}
           value={formData[value]}
           placeholder={placeholder}
-          className="border-1 border-placeholder-gray rounded-[15px] py-[10px] px-5 min-h-[60px] placeholder:placeholder-gray placeholder:text-lg focus:outline-focus-blue focus:outline-[3px]"
+          className="border-1 border-placeholder-gray rounded-[15px] py-[10px] px-5 min-h-15 placeholder:placeholder-gray placeholder:text-lg focus:outline-focus-blue focus:outline-[3px]"
           onChange={handleFormChange}
           required={required ? required : undefined}
           pattern={validation[0] ? validation[1] : undefined}
