@@ -8,8 +8,10 @@ function App() {
     <div className="bg-white font-source mb-9 relative">
       <div className="bg-background-blue h-[617px] md:h-[585px] absolute top-20 md:top-[86px] left-0 w-full z-0"></div>
       <Header />
-      <Hero />
-      <Card />
+      <main>
+        <Hero />
+        <Card />
+      </main>
     </div>
   );
 }
