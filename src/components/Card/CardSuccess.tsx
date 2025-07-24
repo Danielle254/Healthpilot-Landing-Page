@@ -10,9 +10,10 @@ export default function CardSuccess({ userName }: CardSuccessPropsType) {
           alt=""
         />
       </div>
-      <p className="font-bold text-3xl/[1.3] tracking-[-0.3px] text-primary text-balance mb-[14px]">
-        Thanks{userName.length > 0 && ", " + { userName }}! We'll be in touch
-        soon.
+      <p className="font-bold text-3xl/[1.3] tracking-[-0.3px] text-primary text-balance mb-[14px] whitespace-pre-line">
+        {`Thanks${
+          userName.length > 0 ? `, ${userName}` : ""
+        }!\nWe'll be in touch soon.`}
       </p>
       <div className="py-[13px]">
         <p className="text-lg/[1.43] text-primary mb-2">
