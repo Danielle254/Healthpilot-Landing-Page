@@ -1,7 +1,7 @@
 export default function Header() {
   return (
-    <header className="py-4 px-[15px] border-b-1 border-placeholder-gray h-20 md:h-[86px]">
-      <div className="max-w-256 flex items-center justify-between mx-auto">
+    <header className="py-4 px-[15px] border-b-1 border-placeholder-gray h-20 md:h-[86px] flex flex-col justify-center">
+      <div className="max-w-256 w-full flex items-center justify-between mx-auto">
         <img src="/logo.png" alt="EverWell logo" className="w-[175px]" />
         <p className="italic text-header-gray text-lg hidden md:block">
           Your Medicare Personal Shopper
