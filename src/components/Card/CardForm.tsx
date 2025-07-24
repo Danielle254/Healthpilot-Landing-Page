@@ -121,7 +121,7 @@ export default function CardForm({
   }
 
   return (
-    <div className="py-[26px] px-[15px] max-w-[672px] mx-auto z-10">
+    <div className="py-[26px] px-[15px] max-w-[672px] mx-auto z-10 animate-fade">
       <form
         onSubmit={(e) => {
           e.preventDefault();

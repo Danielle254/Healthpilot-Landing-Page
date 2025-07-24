@@ -13,4 +13,14 @@
   --color-placeholder-gray: #ccc;
   --color-header-gray: #686868;
   --font-source: "Source Sans 3", "sans-serif";
+  --animate-fade: fadeIn 0.2s ease-in-out;
+
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 100;
+    }
+  }
 }

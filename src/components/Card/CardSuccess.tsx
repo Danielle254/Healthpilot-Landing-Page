@@ -2,7 +2,7 @@ import type { CardSuccessPropsType } from "./Types";
 
 export default function CardSuccess({ userName }: CardSuccessPropsType) {
   return (
-    <div className="pt-[17px] pb-[10px] md:pb-[17px] px-[15px] max-w-[672px] z-10 text-center mx-auto">
+    <div className="pt-[17px] pb-[10px] md:pb-[17px] px-[15px] max-w-[672px] z-10 text-center mx-auto animate-fade">
       <div className="h-12 w-12 bg-button rounded-full mb-[10px] mx-auto flex items-center justify-center">
         <img
           src="/checkmark.svg"
