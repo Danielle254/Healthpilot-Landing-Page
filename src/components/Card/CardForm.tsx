@@ -111,10 +111,12 @@ export default function CardForm({
 
   function CardFormSubmitButton() {
     return (
-      <input
+      <button
         type="submit"
         className="bg-button text-white hover:bg-button-hover rounded-full w-full py-[3px] px-6 font-bold text-lg/[1.14] h-[50px] mt-9 mb-[18px] md:w-[288px] md:mx-auto md:col-span-2 md:mt-8 md:mb-4 focus:outline-focus-blue focus:outline-[3px] cursor-pointer"
-      />
+      >
+        Submit
+      </button>
     );
   }
 
