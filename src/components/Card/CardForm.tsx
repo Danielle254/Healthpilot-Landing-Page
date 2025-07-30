@@ -87,7 +87,7 @@ export default function CardForm({
     return (
       <div className="flex flex-col gap-[5px]">
         <label
-          htmlFor="phone"
+          htmlFor={name}
           className="text-primary font-semibold text-lg/[1.3]"
         >
           {text}
