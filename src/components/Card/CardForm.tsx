@@ -10,104 +10,9 @@ export default function CardForm({
     setFormData({ ...formData, [name]: value });
   }
 
-  type InputDataType = {
-    name: string;
-    value: keyof typeof formData;
-    text: string;
-    type: string;
-    placeholder: string;
-    required: boolean;
-    validation: [boolean, string?, string?];
-  };
-
-  const formInputData: InputDataType[] = [
-    {
-      name: "firstName",
-      value: "firstName" as keyof typeof formData,
-      text: "First Name",
-      type: "text",
-      placeholder: "First Name",
-      required: false,
-      validation: [false],
-    },
-    {
-      name: "lastName",
-      value: "lastName" as keyof typeof formData,
-      text: "Last Name",
-      type: "text",
-      placeholder: "Last Name",
-      required: false,
-      validation: [false],
-    },
-    {
-      name: "phone",
-      value: "phone" as keyof typeof formData,
-      text: "Phone Number",
-      type: "tel",
-      placeholder: "Phone Number",
-      required: true,
-      validation: [
-        true,
-        "[0-9]{10}",
-        "Please enter a 10 digit phone number with no dashes",
-      ],
-    },
-    {
-      name: "email",
-      value: "email" as keyof typeof formData,
-      text: "Email",
-      type: "email",
-      placeholder: "Email Address",
-      required: true,
-      validation: [false],
-    },
-  ];
-
-  type CardFormInputPropsType = {
-    name: string;
-    value: keyof typeof formData;
-    text: string;
-    type: string;
-    placeholder: string;
-    required: boolean;
-    validation: [boolean, string?, string?];
-    handleFormChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
-  };
-
-  function CardFormInput({
-    name,
-    value,
-    text,
-    type,
-    placeholder,
-    required,
-    validation,
-    handleFormChange,
-  }: CardFormInputPropsType) {
-    return (
-      <div className="flex flex-col gap-[5px]">
-        <label
-          htmlFor={name}
-          className="text-primary font-semibold text-lg/[1.3]"
-        >
-          {text}
-          {required && <span className="text-warning-red pl-[3px]">*</span>}
-        </label>
-        <input
-          type={type}
-          id={name}
-          name={name}
-          value={formData[value]}
-          placeholder={placeholder}
-          className="border-1 border-placeholder-gray rounded-[15px] py-[10px] px-5 min-h-15 placeholder:placeholder-gray placeholder:text-lg focus:outline-focus-blue focus:outline-[3px]"
-          onChange={handleFormChange}
-          required={required ? required : undefined}
-          pattern={validation[0] ? validation[1] : undefined}
-          title={validation[0] ? validation[2] : undefined}
-        />
-      </div>
-    );
-  }
+  const labelStyling = "text-primary font-semibold text-lg/[1.3]";
+  const inputStyling =
+    "border-1 border-placeholder-gray rounded-[15px] py-[10px] px-5 min-h-15 placeholder:placeholder-gray placeholder:text-lg focus:outline-focus-blue focus:outline-[3px]";
 
   function CardFormSubmitButton() {
     return (
@@ -129,18 +34,67 @@ export default function CardForm({
         }}
         className="grid grid-cols-1 md:grid-cols-2 gap-[18px]"
       >
-        {formInputData.map((input) => (
-          <CardFormInput
-            name={input.name}
-            value={input.value}
-            text={input.text}
-            type={input.type}
-            placeholder={input.placeholder}
-            required={input.required}
-            validation={input.validation}
-            handleFormChange={handleFormChange}
+        <div className="flex flex-col gap-[5px]">
+          <label htmlFor="firstName" className={labelStyling}>
+            First Name
+          </label>
+          <input
+            type="text"
+            id="firstName"
+            name="firstName"
+            value={formData.firstName}
+            placeholder="First Name"
+            className={inputStyling}
+            onChange={handleFormChange}
           />
-        ))}
+        </div>
+        <div className="flex flex-col gap-[5px]">
+          <label htmlFor="lastName" className={labelStyling}>
+            Last Name
+          </label>
+          <input
+            type="text"
+            id="lastName"
+            name="lastName"
+            value={formData.lastName}
+            placeholder="Last Name"
+            className={inputStyling}
+            onChange={handleFormChange}
+          />
+        </div>
+        <div className="flex flex-col gap-[5px]">
+          <label htmlFor="phone" className={labelStyling}>
+            Phone Number<span className="text-warning-red pl-[3px]">*</span>
+          </label>
+          <input
+            type="tel"
+            id="phone"
+            name="phone"
+            value={formData.phone}
+            placeholder="Phone Number"
+            className={inputStyling}
+            onChange={handleFormChange}
+            required
+            pattern="[0-9]{10}"
+            title="Please enter a 10 digit phone number with no dashes"
+          />
+        </div>
+        <div className="flex flex-col gap-[5px]">
+          <label htmlFor="email" className={labelStyling}>
+            Email<span className="text-warning-red pl-[3px]">*</span>
+          </label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            value={formData.email}
+            placeholder="Email Address"
+            className={inputStyling}
+            onChange={handleFormChange}
+            required
+          />
+        </div>
+
         <CardFormSubmitButton />
       </form>
     </div>
